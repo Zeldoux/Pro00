@@ -2,12 +2,27 @@ header {
   background-color: antiquewhite;
 }
 
+.navbar {
+  background-color: antiquewhite;
+}
+
 body {
   background-color: antiquewhite;
 }
-body .Menu_Window {
-  background-color: grey;
+
+.myButton {
+  width: fit-content;
+  border-radius: 50%;
+  background-color: #ec2942;
+  color: white;
+  padding: 1em 1em;
 }
-body .Connection_Window {
-  background-color: antiquewhite;
+
+.myButton:hover {
+  background-color: #e21430;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Connection_Window {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

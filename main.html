@@ -13,26 +13,32 @@
     <h1> Welcome to the SharingFileStation !</h1>
 </header>
 
-<body>
-    <div class ="Menu_Window">
-        <div class ="Navigation_Button">
-            <button>Log in</button>
-            <button>Files List</button>
-            <button>Uploads File</button>
-            <button>My Profile</button>
-            <button>log out</button>
+<nav class="navbar">
+    <div class ="navbar_Menu">
+        <div class ="navbar_Menu_Button--red">
+            <button class="myButton">Log in</button>
+            <button class="myButton">Files List</button>
+            <button class="myButton">Uploads File</button>
+            <button class="myButton">My Profile</button>
+            <button class="myButton">log out</button>
         </div>
     </div>
-    
+</nav>
 
+<body>
+    <div class ="Welcome">
+        <p>
+            Welcome to the SharingFileStation , You need to Login before trying to get access to the SharingFileStation and Download / Upload files ! 
+        </p>
+    </div>
     <div class ="Connection_Window">
         <div class ="Connection_Window_Form">
-            <form >
+            <form>
                 <label for="uName">UserName:</label>
                 <input type="text" id="uName" name ="uName" placeholder="Username">
                 <label for ="pWord">PassWord:</label>
                 <input type="password" id ="pWord" name ="pWord" placeholder="passWord">
-                <input type="submit" id ="login" name ="connect" placeholder="Log in">
+                <input type="submit" id ="login" name ="connect" value="Log in">
             </form>
 
         </div>

@@ -1,21 +1,36 @@
+$main-color: #ec2942ff;
+$main-colordark: #e21430ff;
 
+@mixin shadoweffect{
+    text-shadow: .55rem .55rem darken($main-colordark, 35%);
+}
 
 header {
     background-color: antiquewhite;
 }
 
 
-
+.navbar {
+    background-color: antiquewhite;
+}
 
 
 body {
     background-color: antiquewhite;
+}
 
-    .Menu_Window {
-        background-color: grey;
-    }
-    .Connection_Window {
-        
-        background-color:antiquewhite
-    }
+.myButton {
+    width:fit-content;
+    border-radius: 50%;
+    background-color: $main-color;
+    color: white;
+    padding: 1em 1em;
+    
+}
+.myButton:hover {
+    background-color:$main-colordark;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.Connection_Window {
+    display:none;
 }
