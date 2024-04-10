@@ -1,3 +1,13 @@
+header {
+  background-color: antiquewhite;
+}
+
 body {
-  background-color: black;
+  background-color: antiquewhite;
+}
+body .Menu_Window {
+  background-color: grey;
+}
+body .Connection_Window {
+  background-color: antiquewhite;
 }/*# sourceMappingURL=style.css.map */
