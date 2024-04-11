@@ -3,11 +3,30 @@ header {
 }
 
 .navbar {
-  background-color: antiquewhite;
+  overflow: hidden;
+  background-color: #ec2942;
+}
+.navbar .navbar_Button--left {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 1em;
+  border-radius: 4%;
+}
+.navbar .navbar_Button--left .navbar_Menu_Button {
+  display: flex;
+}
+.navbar .navbar_Button--right {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 1em;
+  border-radius: 4%;
 }
 
 body {
   background-color: antiquewhite;
+  height: 800px;
 }
 
 .myButton {
@@ -25,4 +44,10 @@ body {
 
 .Connection_Window {
   display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
