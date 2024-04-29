@@ -4,7 +4,7 @@ header {
 
 .navbar {
   overflow: hidden;
-  background-color: #ec2942;
+  background-color: #333;
 }
 .navbar .navbar_Button--left {
   float: left;
@@ -26,19 +26,19 @@ header {
 
 body {
   background-color: antiquewhite;
-  height: 800px;
+  height: 1200px;
 }
 
 .myButton {
-  width: fit-content;
-  border-radius: 50%;
-  background-color: #ec2942;
+  background-color: #333;
+  border: 0em;
   color: white;
   padding: 1em 1em;
 }
 
 .myButton:hover {
-  background-color: #e21430;
+  background-color: #ec2942;
+  color: black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 

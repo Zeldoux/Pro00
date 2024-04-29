@@ -1,4 +1,4 @@
-// color variables set to be used consistently 
+// color variables set to be used consistently
 $main-color: #ec2942ff;
 $main-colordark: #e21430ff;
 
@@ -15,7 +15,7 @@ header {
 // navbar content both left and right side
 .navbar {
     overflow:hidden;
-    background-color: $main-color;
+    background-color: #333;
     .navbar_Button--left {
         float:left;
         display:block;
@@ -40,13 +40,12 @@ header {
 // body content 
 body {
     background-color: antiquewhite;
-    height: 800px;
+    height: 1200px;
 }
 // set up buttons skin here
 .myButton {
-    width:fit-content;
-    border-radius: 50%;
-    background-color: $main-color;
+    background-color: #333;
+    border: 0em;
     color: white;
     padding: 1em 1em;
     
@@ -54,7 +53,8 @@ body {
 
 // add some effect when hover button
 .myButton:hover {
-    background-color:$main-colordark;
+    background-color:$main-color;
+    color:black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 // hide by default Connection Window to only appear when "login"
