@@ -13,20 +13,23 @@ $main-colordark: #e21430ff;
 }
 header {
     background-color: antiquewhite;
+    text-align: center;
+    padding: 1rem;
+    background-image: url("");
 }
 
 // navbar content both left and right side
 .navbar {
     overflow:hidden;
-    background-color: #030303;
+    background-color: #333;
     margin: 0;
-    .navbar_Button--left {
+    .navbar_button--left {
         float:left;
         display:block;
         text-align: center;
         margin:1em;
     }
-    .navbar_Button--right {
+    .navbar_button--right {
         float:right;
         display:block;
         text-align: center;
@@ -37,6 +40,7 @@ header {
 
 // body content 
 body {
+    z-index: 1;
     background-color: antiquewhite;
     height: 2000px;
 }
@@ -66,4 +70,5 @@ body {
     position:fixed;
     top:0;
     width:100%;
+    z-index: 10; // added to fix sticky and body element disapearing (space previously occupied collapses)
 }

@@ -5,20 +5,22 @@
 
 header {
   background-color: antiquewhite;
+  text-align: center;
+  padding: 1rem;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #030303;
+  background-color: #333;
   margin: 0;
 }
-.navbar .navbar_Button--left {
+.navbar .navbar_button--left {
   float: left;
   display: block;
   text-align: center;
   margin: 1em;
 }
-.navbar .navbar_Button--right {
+.navbar .navbar_button--right {
   float: right;
   display: block;
   text-align: center;
@@ -26,6 +28,7 @@ header {
 }
 
 body {
+  z-index: 1;
   background-color: antiquewhite;
   height: 2000px;
 }
@@ -52,4 +55,5 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
 }/*# sourceMappingURL=style.css.map */
