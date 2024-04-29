@@ -19,16 +19,12 @@ header {
 .navbar {
     margin-top: 0%;
     overflow:hidden;
-    background-color: #000000;
+    background-color: #333;
     .navbar_Button--left {
         float:left;
         display:block;
         text-align: center;
         padding:1em;
-        .navbar_Menu_Button {
-            display: flex;
-            
-        }
     }
     .navbar_Button--right {
         float:right;
