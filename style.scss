@@ -8,8 +8,8 @@ $main-colordark: #e21430ff;
     text-shadow: .55rem .55rem darken($main-colordark, 35%);
 }
 * {
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
 }
 header {
     background-color: antiquewhite;
@@ -19,6 +19,7 @@ header {
 .navbar {
     overflow:hidden;
     background-color: #333;
+    margin: 0;
     .navbar_Button--left {
         float:left;
         display:block;
@@ -30,7 +31,6 @@ header {
         display:block;
         text-align: center;
         padding:1em;
-        border-radius:4%;
 
     }
 }

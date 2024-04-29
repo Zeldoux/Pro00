@@ -1,6 +1,6 @@
 * {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
 }
 
 header {
@@ -10,6 +10,7 @@ header {
 .navbar {
   overflow: hidden;
   background-color: #333;
+  margin: 0;
 }
 .navbar .navbar_Button--left {
   float: left;
@@ -22,7 +23,6 @@ header {
   display: block;
   text-align: center;
   padding: 1em;
-  border-radius: 4%;
 }
 
 body {
