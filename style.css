@@ -1,3 +1,8 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
 header {
   background-color: antiquewhite;
 }
@@ -11,10 +16,6 @@ header {
   display: block;
   text-align: center;
   padding: 1em;
-  border-radius: 4%;
-}
-.navbar .navbar_Button--left .navbar_Menu_Button {
-  display: flex;
 }
 .navbar .navbar_Button--right {
   float: right;
@@ -26,7 +27,7 @@ header {
 
 body {
   background-color: antiquewhite;
-  height: 1200px;
+  height: 2000px;
 }
 
 .myButton {
@@ -34,6 +35,7 @@ body {
   border: 0em;
   color: white;
   padding: 1em 1em;
+  margin: 0%;
 }
 
 .myButton:hover {
