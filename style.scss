@@ -17,7 +17,6 @@ header {
 
 // navbar content both left and right side
 .navbar {
-    margin-top: 100%;
     overflow:hidden;
     background-color: #333;
     .navbar_Button--left {
@@ -39,7 +38,7 @@ header {
 // body content 
 body {
     background-color: antiquewhite;
-    height: 1200px;
+    height: 2000px;
 }
 // set up buttons skin here
 .myButton {
@@ -47,6 +46,7 @@ body {
     border: 0em;
     color: white;
     padding: 1em 1em;
+    margin: 0%;
     
 }
 
