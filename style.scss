@@ -7,7 +7,10 @@ $main-colordark: #e21430ff;
 @mixin shadoweffect{
     text-shadow: .55rem .55rem darken($main-colordark, 35%);
 }
-
+* {
+    padding: 0%;
+    margin: 0%;
+}
 header {
     background-color: antiquewhite;
 }
@@ -21,7 +24,6 @@ header {
         display:block;
         text-align: center;
         padding:1em;
-        border-radius: 4%;
         .navbar_Menu_Button {
             display: flex;
             
