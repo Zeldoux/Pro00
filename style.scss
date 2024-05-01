@@ -15,7 +15,6 @@ header {
     background-color: antiquewhite;
     text-align: center;
     padding: 1rem;
-    background-image: url("");
 }
 
 // navbar content both left and right side
@@ -40,9 +39,10 @@ header {
 
 // body content 
 body {
-    z-index: 1;
+    font-size:28px;
     background-color: antiquewhite;
     height: 2000px;
+    margin:0;
 }
 // set up buttons skin here
 .myButton {
@@ -50,7 +50,7 @@ body {
     border: 0em;
     color: white;
     padding: 1em 1em;
-    margin: 0%;
+    margin: 0;
     
 }
 
@@ -67,8 +67,12 @@ body {
 
 // add a sticky class to be call by javascript when it reaches its scroll position
 .sticky {
-    position:fixed;
+    position:sticky;
     top:0;
     width:100%;
-    z-index: 10; // added to fix sticky and body element disapearing (space previously occupied collapses)
+    z-index:100000;
+}
+img {
+    background-color: black;
+    width:max-content;
 }
