@@ -4,32 +4,28 @@
 }
 
 header {
-  background-color: antiquewhite;
+  color: aliceblue;
   text-align: center;
   padding: 1rem;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
-  margin: 0;
 }
 .navbar .navbar_button--left {
   float: left;
   display: block;
   text-align: center;
-  margin: 1em;
 }
 .navbar .navbar_button--right {
   float: right;
   display: block;
   text-align: center;
-  padding: 1em;
 }
 
 body {
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   font-size: 28px;
-  background-color: antiquewhite;
   height: 2000px;
   margin: 0;
 }
@@ -43,13 +39,45 @@ body {
 }
 
 .myButton:hover {
-  background-color: #ec2942;
+  background-color: rgb(44, 218, 145);
   color: black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .Connection_Window {
   display: none;
+  z-index: 5000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at bottom, rgb(28, 128, 86) 0%, rgb(44, 218, 145) 100%);
+  border: 5px solid white;
+  border-color: white;
+}
+.Connection_Window > h1 {
+  display: block;
+  border-collapse: collapse;
+  border-bottom: 5px solid white;
+  text-align: center;
+}
+.Connection_Window > form {
+  width: 100%;
+  display: block;
+}
+.Connection_Window > form .Connection_Window_FormBox--content {
+  justify-content: space-between;
+}
+.Connection_Window > form .Connection_Window_FormBox--content #login {
+  width: 10em;
+}
+.Connection_Window > form .Connection_Window_FormBox--content .Connection_Window_FormBox--content--cred {
+  flex-direction: column;
+  border-bottom: 5px solid white;
+  padding: 1em;
+}
+.Connection_Window .connection_Window_Forgot {
+  font-size: 1rem;
 }
 
 .sticky {
@@ -57,9 +85,14 @@ body {
   top: 0;
   width: 100%;
   z-index: 100000;
+  background-color: #333;
 }
 
 img {
   background-color: black;
   width: max-content;
+}
+
+.show-connectwindow {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

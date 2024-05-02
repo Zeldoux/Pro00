@@ -1,6 +1,6 @@
 // color variables set to be used consistently
-$main-color: #ec2942ff;
-$main-colordark: #e21430ff;
+$main-color: rgb(44, 218, 145);
+$main-colordark: rgb(28, 128, 86);
 
 
 // little function to add shadow effect to text
@@ -12,7 +12,7 @@ $main-colordark: #e21430ff;
     margin: 0;
 }
 header {
-    background-color: antiquewhite;
+    color:aliceblue;
     text-align: center;
     padding: 1rem;
 }
@@ -20,27 +20,23 @@ header {
 // navbar content both left and right side
 .navbar {
     overflow:hidden;
-    background-color: #333;
-    margin: 0;
     .navbar_button--left {
         float:left;
         display:block;
         text-align: center;
-        margin:1em;
     }
     .navbar_button--right {
         float:right;
         display:block;
         text-align: center;
-        padding:1em;
 
     }
 }
 
 // body content 
 body {
+    background: radial-gradient(ellipse at bottom,#1B2735 0%, #090A0F 100%);
     font-size:28px;
-    background-color: antiquewhite;
     height: 2000px;
     margin:0;
 }
@@ -62,7 +58,50 @@ body {
 }
 // hide by default Connection Window to only appear when "login"
 .Connection_Window {
+    
     display:none;
+    z-index: 5000;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at bottom,$main-colordark 0%, $main-color 100%);
+    border: 5px solid white;
+    border-color: white;
+    & > h1 { // selection de H1 imbriqué dans la class Connection_Window ((sélecteur d'enfant combiné))
+        display:block;
+        border-collapse:collapse;
+        border-bottom: 5px solid white;
+        text-align: center;
+        
+    }
+    & > input {
+
+    }
+
+    & > form {
+        width:100%;
+        display:block;
+        .Connection_Window_FormBox--content {
+            justify-content: space-between;
+            #login {
+                width:10em;
+            }
+            .Connection_Window_FormBox--content--cred {
+                flex-direction: column;
+                border-bottom: 5px solid white;
+                padding:1em;
+
+
+            }
+            
+
+        }
+        
+    }
+    .connection_Window_Forgot {
+        font-size:1rem;
+    }
 }
 
 // add a sticky class to be call by javascript when it reaches its scroll position
@@ -71,8 +110,13 @@ body {
     top:0;
     width:100%;
     z-index:100000;
+    background-color: #333;
 }
 img {
     background-color: black;
     width:max-content;
+}
+
+.show-connectwindow {
+    display:block;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="java.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <title>Work SharingFileStation</title>
 </head>
@@ -34,9 +35,9 @@
                 <button class="myButton">Files Center</button>
         </div>
         <div class="navbar_button--right">
-            <button class="myButton">Login</button>
+            <button class="myButton" id="loginbutton">Login</button>
             <button class="myButton">My Profile</button>
-            <button class="myButton">log out</button>
+            <button class="myButton" id="logoutbutton">log out</button>
         </div>
     </div>
 </nav>
@@ -57,16 +58,27 @@
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
     </div>
     <div class ="Connection_Window">
-        <div class ="Connection_Window_Form">
+            <h1>
+                Account Login  
+            </h1>
+        
             <form>
-                <label for="uName">UserName:</label>
-                <input type="text" id="uName" name ="uName" placeholder="Username">
-                <label for ="pWord">PassWord:</label>
-                <input type="password" id ="pWord" name ="pWord" placeholder="passWord">
-                <input type="submit" id ="login" name ="connect" value="Log in">
-            </form>
+                    <input type="text" id="uName" placeholder="Username" required>
+                    <i class='bx bx-user-circle' ></i>
+                    <input type="password" id ="pWord" name ="pWord" placeholder="passWord" required>
+                    <i class='bx bxs-lock-alt'></i>
 
-        </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password ?</a>
+                </div>
+                    <input type="submit" id ="login" name ="connect" value="Log in">
+                <div class="Register_link">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+                
+            </form>
+        
 
     </div>
     
