@@ -81,10 +81,6 @@ body {
         color:white;
         
     }
-    & > input {
-
-    }
-
     & > form { // Selection of children selector <form>
         width:100%;
         display:block;
@@ -92,6 +88,7 @@ body {
         & > input { // Selection of children selector <form> <input>
             display:block;
             flex-direction:column;
+            
 
         }
         & > i { // selection of children selector <form> <i>
