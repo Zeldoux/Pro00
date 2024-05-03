@@ -1,4 +1,7 @@
 * {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   padding: 0;
   margin: 0;
 }
@@ -31,9 +34,9 @@ body {
 }
 
 .myButton {
-  background-color: #333;
-  border: 0em;
+  background: rgba(0, 0, 0, 0.1);
   color: white;
+  border: 0em;
   padding: 1em 1em;
   margin: 0;
 }
@@ -51,32 +54,35 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse at bottom, rgb(28, 128, 86) 0%, rgb(44, 218, 145) 100%);
-  border: 5px solid white;
+  background: rgba 0, 0, 0, 0.1;
+  backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
   border-color: white;
+  border-radius: 20px;
 }
 .Connection_Window > h1 {
+  margin-top: 1em;
   display: block;
-  border-collapse: collapse;
-  border-bottom: 5px solid white;
   text-align: center;
+  color: white;
 }
 .Connection_Window > form {
   width: 100%;
   display: block;
+  margin-top: 1em;
 }
-.Connection_Window > form .Connection_Window_FormBox--content {
-  justify-content: space-between;
-}
-.Connection_Window > form .Connection_Window_FormBox--content #login {
-  width: 10em;
-}
-.Connection_Window > form .Connection_Window_FormBox--content .Connection_Window_FormBox--content--cred {
+.Connection_Window > form > input {
+  display: block;
   flex-direction: column;
-  border-bottom: 5px solid white;
-  padding: 1em;
 }
-.Connection_Window .connection_Window_Forgot {
+.Connection_Window > form > i {
+  display: block;
+  position: absolute;
+  right: 1em;
+}
+
+.connection_Window_Forgot {
   font-size: 1rem;
 }
 
@@ -85,7 +91,9 @@ body {
   top: 0;
   width: 100%;
   z-index: 100000;
-  background-color: #333;
+  backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  border: 1px solid white;
 }
 
 img {

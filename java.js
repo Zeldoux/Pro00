@@ -4,7 +4,7 @@
 const navbar = document.querySelector(".navbar");
 const sticky = navbar.offsetTop;
 window.addEventListener("scroll",function() {
-    if (window.scrollY >= sticky + 135) { // 135 added to adjust time when navbar get "sticky"
+    if (window.scrollY >= sticky ) { // 135 added to adjust time when navbar get "sticky"
         navbar.classList.add("sticky")
       } else {
         navbar.classList.remove("sticky");

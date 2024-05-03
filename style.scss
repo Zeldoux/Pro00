@@ -8,6 +8,9 @@ $main-colordark: rgb(28, 128, 86);
     text-shadow: .55rem .55rem darken($main-colordark, 35%);
 }
 * {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     padding: 0;
     margin: 0;
 }
@@ -42,9 +45,9 @@ body {
 }
 // set up buttons skin here
 .myButton {
-    background-color: #333;
+    background: rgba(0,0,0,0.1);
+    color:white;
     border: 0em;
-    color: white;
     padding: 1em 1em;
     margin: 0;
     
@@ -65,44 +68,45 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(ellipse at bottom,$main-colordark 0%, $main-color 100%);
-    border: 5px solid white;
+    background: rgba (0,0,0,0.1);
+    backdrop-filter:blur(80px);
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
     border-color: white;
+    border-radius: 20px;
     & > h1 { // selection de H1 imbriqué dans la class Connection_Window ((sélecteur d'enfant combiné))
+        margin-top: 1em;
         display:block;
-        border-collapse:collapse;
-        border-bottom: 5px solid white;
         text-align: center;
+        color:white;
         
     }
     & > input {
 
     }
 
-    & > form {
+    & > form { // Selection of children selector <form>
         width:100%;
         display:block;
-        .Connection_Window_FormBox--content {
-            justify-content: space-between;
-            #login {
-                width:10em;
-            }
-            .Connection_Window_FormBox--content--cred {
-                flex-direction: column;
-                border-bottom: 5px solid white;
-                padding:1em;
+        margin-top: 1em;
+        & > input { // Selection of children selector <form> <input>
+            display:block;
+            flex-direction:column;
 
-
-            }
+        }
+        & > i { // selection of children selector <form> <i>
+            display:block;
+            position:absolute;
+            right:1em;
             
-
+        }
         }
         
     }
     .connection_Window_Forgot {
         font-size:1rem;
     }
-}
+
 
 // add a sticky class to be call by javascript when it reaches its scroll position
 .sticky {
@@ -110,7 +114,9 @@ body {
     top:0;
     width:100%;
     z-index:100000;
-    background-color: #333;
+    backdrop-filter:blur(80px);
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
 }
 img {
     background-color: black;
