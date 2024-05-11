@@ -110,7 +110,7 @@ body {
     position:sticky;
     top:0;
     width:100%;
-    z-index:100000;
+    z-index:5000;
     backdrop-filter:blur(80px);
     backdrop-filter: blur(10px);
     border: 1px solid white;
@@ -129,7 +129,7 @@ img {
 .game_window {
     display:none;
     position:fixed;
-    z-index: 5000;
+    z-index: 50000;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

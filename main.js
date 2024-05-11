@@ -1,11 +1,12 @@
-let canvas = document.getElementById("canvasgame");
-let ctx = canvas.getContext("2d"); // graphics context  
+const canvas = document.getElementById("canvasgame");
+var ctx = canvas.getContext("2d"); // graphics context  
 
-let interval;
+var interval;
 
 
 
 function run() {
+    
     update();
     ctx.clearRect(0,0,canvas.width , canvas.height);
     draw(ctx);
@@ -18,3 +19,4 @@ function init() {
 }
 
 init();
+load();
