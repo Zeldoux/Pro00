@@ -7,6 +7,7 @@
     <script src="java.js" defer></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
+    
     <title>Work SharingFileStation</title>
 </head>
 
@@ -31,6 +32,7 @@
                 <button class="myButton">Home</button>
                 <button class="myButton">Contact</button>
                 <button class="myButton">Files Center</button>
+                <button class="myButton" id="gamebutton">Javascript Game</button>
         </div>
         <div class="navbar_button--right">
             <button class="myButton" id="loginbutton">Login</button>
@@ -77,6 +79,34 @@
                 
             </form>
         
+
+    </div>
+    <div class="game_window">
+
+        <div class="game_window-button-left">
+            <button id="game_window-fullscreen"class="game_window-button">
+                <i class='bx bx-fullscreen' style='color:#ffffff'></i>
+            </button>
+            <button id="game_window-exit-fullscreen"class="game_window-button">
+                <i class='bx bx-exit-fullscreen' style='color:#ffffff'></i>
+            </button>
+        </div>
+
+        <div class="game_window-button-right">
+            <button id="game_window-exit" class="game_window-button">
+                <i class='bx bx-window-close' style='color:#ffffff'></i>
+            </button>
+        </div>
+
+        <h1>
+            Javascript Game
+        </h1>
+
+        <canvas id="canvasgame" width="1600" height="1000" style="background-color: cornflowerblue;">
+        </canvas>
+        <script src="game.js"></script>
+        <script src="main.js"></script>
+        <script src="sprite.js" ></script>
 
     </div>
     
