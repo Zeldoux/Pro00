@@ -1,7 +1,19 @@
 // color variables set to be used consistently
 $main-color: rgb(44, 218, 145);
 $main-colordark: rgb(28, 128, 86);
+$primary-color: rgba(255, 255, 255, 0.8);  // Semi-transparent white for buttons
+$hover-color: rgba(255, 255, 255, 0.6);    // Slightly more transparent on hover
+$border-color: rgba(255, 255, 255, 0.8);
+$nocolor-color:rgba(0, 0, 0, 0) ; // no color at all
+$background-gradient: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 
+/* special transparent class (timesave)*/
+.transparent {
+    transform: translate(-50%, -50%);
+    background: rgba (0,0,0,0.1);
+    backdrop-filter:blur(80px);
+    backdrop-filter: blur(10px);
+}
 
 // little function to add shadow effect to text
 @mixin shadoweffect{
@@ -14,6 +26,7 @@ $main-colordark: rgb(28, 128, 86);
     padding: 0;
     margin: 0;
 }
+// header //
 header {
     color:aliceblue;
     text-align: center;
@@ -21,83 +34,146 @@ header {
 }
 
 // navbar content both left and right side
-.navbar {
-    overflow:hidden;
+nav {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    overflow: hidden;
     .navbar_button--left {
-        float:left;
-        display:block;
-        text-align: center;
+        display:flex;
+        flex-direction:row;
+
     }
     .navbar_button--right {
-        float:right;
-        display:block;
-        text-align: center;
+        display:flex;
+        flex-direction: row;
 
     }
 }
 
 // body content 
 body {
-    background: radial-gradient(ellipse at bottom,#1B2735 0%, #090A0F 100%);
+    padding:1rem;
+    background: $background-gradient;
     font-size:28px;
     height: 2000px;
     margin:0;
+    display:flex;
+    flex-direction: column;
+    gap:35px
 }
 // set up buttons skin here
 .myButton {
-    background: rgba(0,0,0,0.1);
+    background-color:$nocolor-color;
     color:white;
     border: 0em;
     padding: 1em 1em;
     margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     
 }
 
-// add some effect when hover button
+// button style of the game window (close//big screen/smallscreen) 
+.game_window-button {
+    background: $nocolor-color;
+    border:none;
+    margin: 0;
+}
+// add some effect when hover all myButton 
 .myButton:hover {
-    background-color:$main-color;
-    color:black;
+    background-color: $hover-color;
+    color:  black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 // hide by default Connection Window to only appear when "login"
 .Connection_Window {
     
     display:none;
+    flex-direction: column;
     z-index: 5000;
     position:fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba (0,0,0,0.1);
+    background:$nocolor-color;
     backdrop-filter:blur(80px);
     backdrop-filter: blur(10px);
     border: 2px solid white;
     border-color: white;
     border-radius: 20px;
+    padding:1rem;
+    gap:1rem;
     & > h1 { // selection de H1 imbriqué dans la class Connection_Window ((sélecteur d'enfant combiné))
-        margin-top: 1em;
+        margin: 1rem;
         display:block;
         text-align: center;
         color:white;
         
     }
     & > form { // Selection of children selector <form>
-        width:100%;
-        display:block;
-        margin-top: 1em;
-        & > input { // Selection of children selector <form> <input>
-            display:block;
-            flex-direction:column;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:1rem;
+        // Selection of children selector <form> <input>
+        & > button {
+            padding: 0.5rem 1rem;
+            font-size: 16px;
+            color: #000;
+            background-color: $primary-color;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
             
+            &:hover {
+                background-color: $hover-color;
+                color:  #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
 
+        & > div {
+            display:flex;
+            gap:1rem;
+            align-items: center;
         }
         & > i { // selection of children selector <form> <i>
-            display:block;
-            position:absolute;
-            right:1em;
+            width:20px;
+            
             
         }
+
+    }
+    /* remember login content */
+    .remember-forgot {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap:1rem;
+        font-size:20px;
+        label{
+            display:flex;
+            flex-direction: row;
+            gap:0.2rem;
+            align-items: center;
+            width:fit-content;
         }
+    }
+    .Register_link {
+        font-size:20px;
+        p{
+            padding-left:1rem;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        
+        }
+    }
         
     }
     .connection_Window_Forgot {
@@ -121,44 +197,21 @@ img {
 }
 
 .show-connectwindow {
-    display:block;
+    display:flex;
 }
 
 // Gamewindow display a javascript game hidden by default
-
+// gamewindow //
 .game_window {
     display:none;
-    position:fixed;
-    z-index: 50000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba (0,0,0,0.1);
+    background:$nocolor-color;
     backdrop-filter:blur(80px);
     backdrop-filter: blur(10px);
     border: 2px solid white;
     border-color: white;
     border-radius: 20px;
-    
-    .game_window-button-left {
-        margin:0.5rem;
-        display:flex;
-        flex-direction: row;
-        position:fixed;
-
-        
-
-    }
-
-    .game_window-button-right {
-        margin:0.5rem;
-        display:flex;
-        flex-direction:row;
-        position:fixed;
-        left:97%;
-    }
     & > h1 {
-        margin-top: 10px;
+        margin-top: 1rem;
         text-align: center;
         color:white;
     }
@@ -170,10 +223,41 @@ img {
         display:block;
         border: 1px solid black;
     }
+    // button of the gamewindow //
+    .game_window-content {
+        display:flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        justify-content: space-between;
+        button {
+            font-size: 30px;
+            padding:1rem;
+        }
+        button:hover{
+            cursor:pointer;
+        }
+    }
 
 
 }
 // class made to be used with javascript (onclick) event to display the gamewindow hidden by default
 .show-gamewindow {
-    display:block;
+    display:flex;
+    flex-direction: column;
+    position:fixed;
+    left:12%;
+    top:15%;
+}
+
+
+// media queries //
+
+
+// ipad queries //
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+}
+// mobile queries //
+@media (max-width: 767px) {
+
 }

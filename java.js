@@ -1,7 +1,7 @@
 
 
 // get the navbar and the navbar offset Top 
-const navbar = document.querySelector(".navbar");
+const navbar = document.getElementById("NavBar");
 const sticky = navbar.offsetTop;
 window.addEventListener("scroll",function() {
     if (window.scrollY >= sticky ) { // 135 added to adjust time when navbar get "sticky"
@@ -45,11 +45,46 @@ document.addEventListener("click",function(event) {
     closeConnectionWindow();
 })
 
-
-
+// game window buttons action (close/fullscreen)
 
 const gamewindowclose = document.getElementById("game_window-exit");
+const gamefullscreen = document.getElementById("game_window-fullscreen")
 
+// close
 gamewindowclose.addEventListener("click",function () {
   gamewindow.classList.remove("show-gamewindow");
+  document.exitFullscreen();
 })
+// variable to get the original canvas width / height 
+let originalCanvasWidth;
+let originalCanvasHeight;
+// full screen
+gamefullscreen.addEventListener("click",function() {
+  if (!document.fullscreenElement){
+    if (gamewindow.requestFullscreen){
+      gamewindow.requestFullscreen();
+    } else if (gamewindow.mozRequestFullScreen) {
+      gamewindow.mozRequestFullScreen();
+    }
+  originalCanvasWidth = gameCanvas.width;
+  originalCanvasHeight = gameCanvas.height;
+  gamewindow.style.width = "100%";
+  gamewindow.style.height = "100%";
+  gamewindow.style.top = "0";
+  gamewindow.style.left = "0";
+  gamewindow.style.transform = "none";
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+} else {
+  if (document.exitFullscreen) {
+      document.exitFullscreen();
+  }
+  gameWindow.style.width = "";
+  gameWindow.style.height = "";
+  gameWindow.style.top = "50%";
+  gameWindow.style.left = "50%";
+  gameWindow.style.transform = "translate(-50%,-50%)";
+  gameCanvas.style.width = originalCanvasWidth + "px";
+  gameCanvas.style.height = originalCanvasHeight + "px";
+}
+});
