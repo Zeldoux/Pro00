@@ -49,3 +49,12 @@ The Step By Step program :
   *build gameplay part
 /10 build a Forum Website part (optional)
 
+
+//******************************************//
+                
+Tech used for now :
+ *Javascript
+ *Sass
+ *Css
+ *Html
+
