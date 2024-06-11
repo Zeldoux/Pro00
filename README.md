@@ -58,3 +58,5 @@ Tech used for now :
  *Css
  *Html
 
+
+You cannot copy or use this content without my own aprovals this is all homemade with no use of any license .
