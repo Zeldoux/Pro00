@@ -3,9 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="Css/FileListstyle.css">
+    <script src="JavaScript/java.js" defer></script>
+    <script src="JavaScript/filelistscript.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>FileCenter</title>
 </head>
+<header class="header">
+    <div class="header_title">
+        <img src="img/dessin.png"></img>
+    </div>
+
+
+
+</header>
+
+<nav id="NavBar">
+    <div class ="navbar_button--left">
+            <button class="myButton">Home</button>
+            <button class="myButton">Contact</button>
+            <button class="myButton">Files Center</button>
+            <button class="myButton" id="gamebutton">Javascript Game</button>
+    </div>
+    <div class="navbar_button--right">
+        <button class="myButton" id="loginbutton">Login</button>
+        <button class="myButton">My Profile</button>
+        <button class="myButton" id="logoutbutton">log out</button>
+    </div>
+</div>
+</nav>
 <body>
+    <body>
+        <!-- Welcome // home -->
+        <div class ="Welcome">
+            <h1>Files Center</h1>
+        </div>
+        <!-- File explorer header-->
+        <div class="File-explorer">
+            <div class="File-explorer_header">
+                <div class="File-explorer_header-logo">
+                    <img src="img/dessin.png"></img>
+                </div>
+                <div class="File-explorer_header-path">
+                    <span><i class='bx bx-desktop'></i></span>
+                    <span>C://Documents/Code/Html/MyFolderuploadedExample/</span>
+                </div>
+                <div class="File-explorer_header-research">
+                    <form>
+                        <input type="search" id="Research" placeholder="Research inside C:">
+                        <span><i class='bx bx-search ' style='color:#ffffff' ></i></span>
+                    </form>
+                </div>
+            </div>
+            <div class="File-explorer_menu">
+                <div class ="File-explorer_menu_left">
+                    <i class='bx bx-folder bx-lg'></i>
+                    <span>Name</span>
+                    <span>Size</span>
+                    <span>Author</span>
+                    <span>Last modified</span>
+                </div>
+                <div class="File-explorer_menu_right">
+                    <button class="download" id="download">
+                        <i class='bx bx-download' id="download-button"></i>
+                    </button>
+                    <button class="upload" id="upload">
+                        <i class='bx bx-upload' id="upload-button"></i>
+                    </button>
+                </div>
+
+            </div>
+            <!-- File explorer content-->
+            <div class="File-explorer_content">
+                <ul class="files">
+                    <li class ="File-explorer_menu_info">
+                        <i class='bx bx-folder bx-lg'></i>
+                        <span><i class='bx bx-folder bx-lg'></i></span>
+                        <span>Name</span>
+                        <span>Size</span>
+                        <span>Author</span>
+                        <span>Last modified</span>
+                    </li>
+             <!-- List of files and folders will be populated dynamically -->
+                </ul>
+                <div class="File-explorer_File-feature">
+                    <span><i class='bx bxs-folder' ></i>My Files</span>
+                    <span><i class='bx bx-folder-plus' ></i>New Folder</span>
+                    <span><i class='bx bxs-file-plus' ></i>New Files</span>
+                    <span><i class='bx bx-cog' ></i>Setting</span>
+                </div>
+            </div>
+        </div>
     
+        <!-- Connection Window -->
+        <div class ="Connection_Window transparent">
+                <h1>
+                    Account Login  
+                </h1>
+            
+                <form>
+                        <div class="Connection_Window-Username">
+                            <input type="text" id="uName" required>
+                        <i class='bx bx-user-circle' style='color:#ffffff' ></i>
+                        </div>
+                        <div class="Connection_Window-Password">
+                            <input type="password" id ="pWord" required>
+                        <i class='bx bxs-lock-alt' style='color:#ffffff' ></i>
+                        </div>
+                        <button type="submit" id ="login" name ="connect">
+                            Log in
+                        </button>
+                        </form>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot password ?</a>
+                    </div>
+                    <div class="Register_link">
+                        <p>You don't have an account ? <a href="#">Register here !</a></p>
+                    </div>
+                    
+            
+    
+        </div>
+        
+        
 </body>
 </html>

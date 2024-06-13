@@ -13,12 +13,12 @@ function load() {
     for (i= 0 ; i < 10 ; i++) {
 
         speed[i] = Math.random(10,100);
-        imgall[i] = new Sprite("img/Player.png",px,py);
+        imgall[i] = new Sprite("/img/Player.png",px,py);
         py = py + 50;
 
     }
 
-    img = new Sprite("img/Player.png");
+    img = new Sprite("/img/Player.png");
     
 
 }
