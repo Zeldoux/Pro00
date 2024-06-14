@@ -7,6 +7,12 @@ $border-color: rgba(255, 255, 255, 0.8);
 $nocolor-color:rgba(0, 0, 0, 0) ; // no color at all
 $background-gradient: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 
+// color variable for the file explorer//
+$explorer-darkmaincolor:#191919;
+$explorer-maincolor:#20201a;
+$explorer-lightmaincolor:#2e2c27;
+$explorer-lightsecondcolor:rgb(44, 44, 44);
+
 /* special transparent class (timesave)*/
 
 .transparent {
@@ -14,6 +20,11 @@ $background-gradient: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100
     background: rgba (0,0,0,0.1);
     backdrop-filter:blur(80px);
     backdrop-filter: blur(10px);
+}
+/* special selected class(timesave*/
+.selected {
+    background-color: $hover-color; /* Changez la couleur selon vos préférences */
+    border: 1px solid $border-color; /* Optionnel : ajoutez une bordure pour plus de visibilité */
 }
 
 @mixin shadoweffect{
@@ -101,10 +112,12 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid white;
 }
+// set background color and width of logo //
 img {
     background-color: black;
     width:max-content;
 }
+// welcome text //
 .Welcome {
     text-align: center;
     color:white;
@@ -117,7 +130,7 @@ img {
     height:2000px;
     // file explorer header //
     .File-explorer_header{
-        background-color: #20201a;
+        background-color:$explorer-maincolor;
         display:flex;
         flex-direction: row;
         align-items: center;
@@ -129,6 +142,7 @@ img {
         border:#2c2c2c solid 1px;
         
     }
+    // header logo //
     .File-explorer_header-logo{
         width:10%;
         img {
@@ -137,15 +151,18 @@ img {
     }
     // file explorer path style part //
     .File-explorer_header-path{
+        display:flex;
+        gap:15px;
         padding:1rem;
-        background-color:#2e2c27 ;
+        background-color:$explorer-lightmaincolor ;
         border-radius: 25px;
         border:#2c2c2c solid 2px;
+        
     }
 
     // file explorer research style part //
     .File-explorer_header-research{
-        background-color:#2e2c27;
+        background-color:$explorer-lightmaincolor;
         display:flex;
         flex-direction:row;
         border-radius: 25px;
@@ -184,13 +201,13 @@ img {
         display:flex;
         flex-direction: row;
         height:1000px;
-        background-color:#191919;
+        background-color:$explorer-darkmaincolor;
         padding:1rem;
         gap:1rem;
     
         // file feature part (my files new files ect...)//
         .File-explorer_File-feature {
-            border:#2c2c2c solid 1px;
+            border:$explorer-lightsecondcolor solid 1px;
             display:flex;
             flex-direction: column;
             width:33%;
@@ -202,28 +219,34 @@ img {
                 flex-direction: row;
                 gap:0.8rem;
                 color:white;
-                border:#2c2c2c solid 1px;
+                border:$explorer-lightsecondcolor solid 1px;
                 padding:0;
                 height:10%;
                 align-items: center;
                 & > i{
                     padding-left:1rem;
                 }
+            
+            }
+            & > span:hover{
+                background-color: $hover-color;
+                color:  black;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                cursor:pointer;
             }
         }
         // file display part //
         .files {
-            width:60%;
+            width:65%;
             list-style-type: none;
             display:flex;
             flex-direction: column;
             flex-wrap: wrap;
-            padding:0.5rem;
-            gap:1rem;
-            border:#2c2c2c solid 1px;
+            border:$explorer-lightsecondcolor solid 1px;
             
-
+            // item display config //
             .item {
+                background-color: $explorer-lightsecondcolor;
                 display:flex;
                 flex-direction: row;
                 text-align: center;
@@ -232,22 +255,41 @@ img {
                 align-items: center;
                 width:100%;
                 justify-content: space-between;
+                cursor: pointer;
                 & > span{
                     width:30%;
                 }
+            }
+
+            // example info style // 
+            .File-explorer_menu_info{
+                background-color:$explorer-maincolor ;
+                display:flex;
+                flex-direction: row;
+                text-align: center;
+                font-size:15px;
+                color:white;
+                align-items: center;
+                justify-content: space-between;
+                border:$explorer-lightsecondcolor solid 1px;
+                & > span{
+                    border-left:#2c2c2c solid 1px;
+                    width:30%;
+                }
+    
             }
         }
     }
     // file explorer menuwindow with download/upload button and info about files //
     .File-explorer_menu{
-        background-color: #2c2c2c;
+        background-color:$explorer-lightsecondcolor;
         display:flex;
         flex-direction: row;
         padding-left:1rem;
         color:white;
         justify-content: space-between;
         gap:1rem;
-        border:#2c2c2c solid 1px;
+        border:$explorer-lightsecondcolor solid 1px;
         .File-explorer_menu_left{
             display:flex;
             justify-content: space-between;
@@ -275,6 +317,7 @@ img {
             }
 
         }
+
     }
 }
 

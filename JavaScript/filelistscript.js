@@ -61,33 +61,31 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             // Add more conditions for other file types as needed
         });
-        return html;
-        
-        return html;
-        
+        return html;        
     }
 
     // Function to render files and folders
     function renderFiles(data) {
-        filesList.innerHTML = generateHTML(data);
+        filesList.innerHTML += generateHTML(data);
     }
 
     // Initial rendering of files and folders
     renderFiles(folderData);
 
-    // Add click event listener to handle folder/file click
-    filesList.addEventListener("click", function(event) {
-        const target = event.target;
-        const itemType = target.dataset.type;
-        const itemName = target.dataset.name;
+    // select all item (<li>) //
+    const items = document.querySelectorAll(".item");
 
-        if (itemType === "folder") {
-            // Placeholder function to handle opening folders
-            openFolder(itemName);
-        } else if (itemType === "file") {
-            // Placeholder function to handle file actions (open/download)
-            openFile(itemName);
-        }
+    // Add click event listener to handle folder/file click
+    items.forEach(item => {
+
+        item.addEventListener("click", function(event) {
+
+        // Remove the selected class from all items
+        items.forEach(i => i.classList.remove("selected"));
+
+         // Add the selected class to the clicked item
+        item.classList.add("selected")
+    });
     });
 
     // Placeholder function to handle opening folders
