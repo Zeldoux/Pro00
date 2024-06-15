@@ -1,0 +1,235 @@
+// color variables set to be used consistently
+$main-color: rgb(44, 218, 145);
+$main-colordark: rgb(28, 128, 86);
+$primary-color: rgba(255, 255, 255, 0.8);  // Semi-transparent white for buttons
+$hover-color: rgba(255, 255, 255, 0.6);    // Slightly more transparent on hover
+$border-color: rgba(255, 255, 255, 0.8);
+$nocolor-color:rgba(0, 0, 0, 0) ; // no color at all
+$background-gradient: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+
+/* special transparent class (timesave)*/
+.transparent {
+    background: rgba(0,0,0,0.1);
+    backdrop-filter:blur(80px);
+    backdrop-filter: blur(10px);
+}
+
+// little function to add shadow effect to text
+@mixin shadoweffect{
+    text-shadow: .55rem .55rem darken($main-colordark, 35%);
+}
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+// header //
+header {
+    color:aliceblue;
+    text-align: center;
+    padding: 1rem;
+}
+
+// navbar content both left and right side
+nav {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+    .navbar_button--left {
+        display:flex;
+        flex-direction:row;
+
+    }
+    .navbar_button--right {
+        display:flex;
+        flex-direction: row;
+
+    }
+}
+
+
+// body content 
+body {
+    padding:1rem;
+    padding-bottom: 0;
+    background: $background-gradient;
+    font-size:28px;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    gap:35px;
+    & > article{
+        width:100%;
+        border: $border-color solid 2px;
+        border-radius: 20px;
+        display:flex;
+        flex-direction: row;
+        gap:2rem;
+        
+        flex-wrap:wrap;
+        .profile-header{
+            width:60%;
+            
+            border: $border-color solid 2px;
+            border-radius: 20px;
+
+        }
+        .profile-menu{
+            border: $border-color solid 2px;
+            border-radius: 20px;
+        }
+        .profile-main{
+            width:100%;
+            height:200px;
+            border: $border-color solid 2px;
+            border-radius: 20px;
+        }
+    }
+}
+// set up buttons skin here
+.myButton {
+    background-color:$nocolor-color;
+    color:white;
+    border: 0em;
+    padding: 1em 1em;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+// button style of the game window (close//big screen/smallscreen) 
+.game_window-button {
+    background: $nocolor-color;
+    border:none;
+    margin: 0;
+}
+// add some effect when hover all myButton 
+.myButton:hover {
+    background-color: $hover-color;
+    color:  black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+// add a sticky class to be call by javascript when it reaches its scroll position
+.sticky {
+    position:sticky;
+    top:0;
+    width:100%;
+    z-index:5000;
+    backdrop-filter:blur(80px);
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+}
+img {
+    background-color: black;
+    width:max-content;
+}
+
+.show-connectwindow {
+    display:flex;
+}
+
+// Gamewindow display a javascript game hidden by default
+// gamewindow //
+.game_window {
+    display:none;
+    background:$nocolor-color;
+    backdrop-filter:blur(80px);
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    border-color: white;
+    border-radius: 20px;
+    & > h1 {
+        margin-top: 1rem;
+        text-align: center;
+        color:white;
+    }
+    & > canvas {
+        margin:1em;
+        top:50%;
+        left:50%;
+        background-color: #090A0F;
+        display:block;
+        border: 1px solid black;
+    }
+    // button of the gamewindow //
+    .game_window-content {
+        display:flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        justify-content: space-between;
+        button {
+            font-size: 30px;
+            padding:1rem;
+        }
+        button:hover{
+            cursor:pointer;
+        }
+    }
+
+
+}
+// class made to be used with javascript (onclick) event to display the gamewindow hidden by default
+.show-gamewindow {
+    display:flex;
+    flex-direction: column;
+    position:fixed;
+    left:7%;
+    top:10%;
+}
+
+// footer setup //
+footer {
+    display:flex;
+    justify-content: center;
+    padding:1rem;
+    border:rgb(255, 255, 255) solid 2px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom:none;
+    padding-bottom: 2rem;
+    .footer-main {
+        .footer-main_content{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:0.5rem;
+
+            & > h3 {
+                display:flex;
+                justify-content: center;
+                padding-bottom:1rem;
+                font-size: medium;
+            }
+            & > p {
+                font-size: 15px;
+                display:flex;
+                gap:1rem;
+                align-items: center;
+                & > i {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+
+// media queries //
+
+
+// ipad queries //
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+}
+// mobile queries //
+@media (max-width: 767px) {
+
+}

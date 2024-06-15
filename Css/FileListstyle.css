@@ -2,8 +2,10 @@
 .transparent {
   transform: translate(-50%, -50%);
   background: rgba 0, 0, 0, 0.1;
-  backdrop-filter: blur(80px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(80px);
+          backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 /* special selected class(timesave*/
@@ -82,13 +84,16 @@ body {
   top: 0;
   width: 100%;
   z-index: 5000;
-  backdrop-filter: blur(80px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(80px);
+          backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border: 1px solid white;
 }
 
 img {
   background-color: black;
+  width: -moz-max-content;
   width: max-content;
 }
 
