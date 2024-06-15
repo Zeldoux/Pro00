@@ -1,0 +1,10 @@
+# Jekyll Configuration
+title: FileStations
+description: personnal project for educational purpose.
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+# Exclude from build
+exclude:
+  - "node_modules"
+  - "Back-end/fullstakc-API/node_modules"
