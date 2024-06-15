@@ -3,21 +3,13 @@ It's a fully functional website with a backend server that I host myself.
 The primary goal is to provide a versatile platform offering several useful features to users.
 
 The website will encompass several key features :
-
- #1 Functional Account System: Users can create an account and access all site features once logged in.
- 
- #2 Coding Space: An interactive coding space will allow users to code directly on the website, import/export, and share their code.
- 
- #3 File Upload/Download Systems: Each user will be able to upload or share files on the site, whether for sharing with other users or for personal backup.
- 
- #4 JavaScript Video Games: A continuously evolving MMORPG JavaScript video game, with graphics inspired by Zelda/Pokémon, aiming to support up to 100 players.
- 
- #5 Account Statistics: Users will have access to various statistics such as time spent on the site, files downloaded/uploaded, usage of the coding space, etc.
- 
- #6 Integrated Chat: A chat feature will enable users to communicate directly on the site.
- 
- #7 Potential Forum: An optional forum option that can contain a variety of topics.
- 
+#1 Functional Account System: Users can create an account and access all site features once logged in.
+#2 Coding Space: An interactive coding space will allow users to code directly on the website, import/export, and share their code.
+#3 File Upload/Download Systems: Each user will be able to upload or share files on the site, whether for sharing with other users or for personal backup.
+#4 JavaScript Video Games: A continuously evolving MMORPG JavaScript video game, with graphics inspired by Zelda/Pokémon, aiming to support up to 100 players.
+#5 Account Statistics: Users will have access to various statistics such as time spent on the site, files downloaded/uploaded, usage of the coding space, etc.
+#6 Integrated Chat: A chat feature will enable users to communicate directly on the site.
+#7 Potential Forum: An optional forum option that can contain a variety of topics.
 
 -- this content is only for educationals purpose --
 
