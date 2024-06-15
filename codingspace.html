@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/codingspace.css">
     <script src="JavaScript/java.js" defer></script>
-    <script src="JavaScript/codingspace.js" defer></script>
+    <script type="module" src="JavaScript/codingspace.js" defer></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/4.15.0/xterm.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xterm/4.15.0/xterm.min.css"/>
+
+    <!--<script  src="node_modules/@xterm/xterm/lib/xterm.js"></script>
+    <link rel="stylesheet" href="node_modules/@xterm/xterm/css/xterm.css"/>!-->
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Coding Space</title>
 </head>
@@ -21,14 +24,14 @@
 
 <nav id="NavBar">
     <div class ="navbar_button--left">
-            <button class="myButton"><a href="main.html">Home</a></button>
-            <button class="myButton"><a href="codingspace.html">Coding Space</a></button>
-            <button class="myButton"><a href="filelist.html">Files Center</a></button>
-            <button class="myButton" id="gamebutton">Javascript Game</button>
+             <button class="myButton"><a href="main.html">Home</a></button>
+                <button class="myButton"><a href="codingspace.html">Coding Space</a></button>
+                <button class="myButton"><a href="filelist.html">Files Center</a></button>
+                <button class="myButton" id="gamebutton">Javascript Game</button>
     </div>
     <div class="navbar_button--right">
         <button class="myButton" id="loginbutton">Login</button>
-        <button class="myButton">My Profile</button>
+        <button class="myButton"><a href="profile.html">My Profile</a></button>
         <button class="myButton" id="logoutbutton">log out</button>
     </div>
 </div>
