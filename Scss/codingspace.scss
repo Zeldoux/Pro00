@@ -1,0 +1,115 @@
+// color variable for window
+$explorer-darkmaincolor:#191919;
+$explorer-maincolor:#20201a;
+$explorer-lightmaincolor:#2e2c27;
+$explorer-lightsecondcolor:rgb(44, 44, 44);
+
+// color variables set to be used consistently
+$main-color: rgb(44, 218, 145);
+$main-colordark: rgb(28, 128, 86);
+$primary-color: rgba(255, 255, 255, 0.8);  // Semi-transparent white for buttons
+$hover-color: rgba(255, 255, 255, 0.6);    // Slightly more transparent on hover
+$border-color: rgba(255, 255, 255, 0.8);
+$nocolor-color:rgba(0, 0, 0, 0) ; // no color at all
+$background-gradient: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+
+/* special transparent class (timesave)*/
+.transparent {
+    background: rgba(0,0,0,0.1);
+    backdrop-filter:blur(80px);
+    backdrop-filter: blur(10px);
+}
+
+// little function to add shadow effect to text
+@mixin shadoweffect{
+    text-shadow: .55rem .55rem darken($main-colordark, 35%);
+}
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+// header //
+header {
+    color:aliceblue;
+    text-align: center;
+    padding: 1rem;
+}
+// body content 
+body {
+    padding:1rem;
+    padding-bottom: 0;
+    background: $background-gradient;
+    font-size:28px;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    gap:35px;
+    height:1500px;
+}
+
+// navbar content both left and right side
+nav {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+    .navbar_button--left {
+        display:flex;
+        flex-direction:row;
+
+    }
+    .navbar_button--right {
+        display:flex;
+        flex-direction: row;
+
+    }
+}
+// set up buttons skin here
+.myButton {
+    background-color:$nocolor-color;
+    color:white;
+    border: 0em;
+    padding: 1em 1em;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    
+}
+// add some effect when hover all myButton 
+.myButton:hover {
+    background-color: $hover-color;
+    color:  black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+// add a sticky class to be call by javascript when it reaches its scroll position
+.sticky {
+    position:sticky;
+    top:0;
+    width:100%;
+    z-index:5000;
+    backdrop-filter:blur(80px);
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+}
+img {
+    background-color: black;
+    width:max-content;
+}
+
+
+
+// config coding window //
+#editor-container {
+    width:80%;
+    height:50%;
+    border: $border-color solid 1px;
+}
+
+// terminal config //
+#terminal {
+    width:50%;
+    height:20%;
+}

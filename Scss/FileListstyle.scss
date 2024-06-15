@@ -23,8 +23,8 @@ $explorer-lightsecondcolor:rgb(44, 44, 44);
 }
 /* special selected class(timesave*/
 .selected {
-    background-color: $hover-color; /* Changez la couleur selon vos préférences */
-    border: 1px solid $border-color; /* Optionnel : ajoutez une bordure pour plus de visibilité */
+    background-color: $hover-color; 
+    border: 1px solid $border-color; 
 }
 
 @mixin shadoweffect{

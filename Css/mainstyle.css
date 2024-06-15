@@ -1,7 +1,6 @@
 /* special transparent class (timesave)*/
 .transparent {
-  transform: translate(-50%, -50%);
-  background: rgba 0, 0, 0, 0.1;
+  background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(80px);
   backdrop-filter: blur(10px);
 }
@@ -38,9 +37,9 @@ nav .navbar_button--right {
 
 body {
   padding: 1rem;
+  padding-bottom: 0;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   font-size: 28px;
-  height: 2000px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -213,4 +212,36 @@ img {
   position: fixed;
   left: 7%;
   top: 10%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: rgb(255, 255, 255) solid 2px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: none;
+  padding-bottom: 2rem;
+}
+footer .footer-main .footer-main_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+footer .footer-main .footer-main_content > h3 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  font-size: medium;
+}
+footer .footer-main .footer-main_content > p {
+  font-size: 15px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+footer .footer-main .footer-main_content > p > i {
+  font-size: 40px;
 }/*# sourceMappingURL=mainstyle.css.map */

@@ -1,0 +1,89 @@
+/* special transparent class (timesave)*/
+.transparent {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  color: aliceblue;
+  text-align: center;
+  padding: 1rem;
+}
+
+body {
+  padding: 1rem;
+  padding-bottom: 0;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  font-size: 28px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  height: 1500px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+nav .navbar_button--left {
+  display: flex;
+  flex-direction: row;
+}
+nav .navbar_button--right {
+  display: flex;
+  flex-direction: row;
+}
+
+.myButton {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 0em;
+  padding: 1em 1em;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.myButton:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5000;
+  backdrop-filter: blur(80px);
+  backdrop-filter: blur(10px);
+  border: 1px solid white;
+}
+
+img {
+  background-color: black;
+  width: max-content;
+}
+
+#editor-container {
+  width: 80%;
+  height: 50%;
+  border: rgba(255, 255, 255, 0.8) solid 1px;
+}
+
+#terminal {
+  width: 50%;
+  height: 20%;
+}/*# sourceMappingURL=codingspace.css.map */
