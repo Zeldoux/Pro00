@@ -245,12 +245,14 @@ img {
     display:flex;
     flex-direction: column;
     position:fixed;
+    z-index:50000;
     left:7%;
     top:10%;
 }
 
 // footer setup //
 footer {
+    z-index:1;
     display:flex;
     justify-content: center;
     padding:1rem;
