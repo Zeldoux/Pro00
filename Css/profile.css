@@ -46,30 +46,72 @@ body {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  color: white;
 }
 body > article {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body > article .profile-header {
   border: rgba(255, 255, 255, 0.8) solid 2px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  height: 250px;
 }
-body > article .profile-header {
-  width: 60%;
-  border: rgba(255, 255, 255, 0.8) solid 2px;
-  border-radius: 20px;
+body > article .profile-header > i {
+  font-size: 160px;
 }
-body > article .profile-menu {
-  border: rgba(255, 255, 255, 0.8) solid 2px;
-  border-radius: 20px;
+body > article .profile-header .profile-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 body > article .profile-main {
-  width: 100%;
-  height: 200px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+body > article .profile-main .profile-info {
   border: rgba(255, 255, 255, 0.8) solid 2px;
   border-radius: 20px;
+}
+body > article .profile-main .profile-info_title {
+  display: flex;
+}
+body > article .profile-main .profile-info_title > h1 {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  border-bottom: rgba(255, 255, 255, 0.8) solid 2px;
+}
+body > article .profile-main .profile-info_title > h1 > button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+}
+body > article .profile-main .profile-info_content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+body > article .profile-main .profile-info_modify {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
 }
 
 .myButton {
