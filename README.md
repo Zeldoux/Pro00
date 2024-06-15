@@ -3,6 +3,7 @@ It's a fully functional website with a backend server that I host myself.
 The primary goal is to provide a versatile platform offering several useful features to users.
 
 The website will encompass several key features :
+
  #1 Functional Account System: Users can create an account and access all site features once logged in.
  
  #2 Coding Space: An interactive coding space will allow users to code directly on the website, import/export, and share their code.
