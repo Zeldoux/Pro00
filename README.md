@@ -1,3 +1,19 @@
+
+
+  Workstation 
+
+
+ <instruction>
+
+  <TO INSTALL FRONT END JUST COPY OR DOWNLOAD THIS REPOSITORY OR ONLY THE FRONT END REPOSITORY
+
+   <TO INSTALL BACK END DOWNLOAD THIS REPOSITORY OR ONLY THE BACK END REPOSITORY 
+   
+   INSTRUCTION TO INSTALL BACK END API AND HOW TO USE IT IN BACK-END FILES README.me 
+
+
+<Presentation>
+
 This project is a personal endeavor aimed at enhancing my development journey.
 It's a fully functional website with a backend server that I host myself.
 The primary goal is to provide a versatile platform offering several useful features to users.
